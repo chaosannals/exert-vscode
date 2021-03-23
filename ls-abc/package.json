@@ -1,0 +1,25 @@
+{
+    "name": "ls-abc",
+    "displayName": "ls-abc",
+    "description": "language support for abc",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "abc",
+            "aliases": ["abc"],
+            "extensions": [".abc .abcs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "abc",
+            "scopeName": "source.abc",
+            "path": "./syntaxes/abc.tmLanguage.json"
+        }]
+    }
+}

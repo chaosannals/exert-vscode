@@ -1,0 +1,67 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "abc",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#stringQuotedDouble"
+		},
+		{
+			"include": "#stringQuotedSingle"
+		},
+		{
+			"include": "#commentLine"
+		},
+		{
+			"include": "#commentBlock"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.abc",
+					"match": "\\b(if|while|for|return|let|in|as)\\b"
+				}
+			]
+		},
+		"stringQuotedDouble": {
+			"name": "string.quoted.double.abc",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.abc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"stringQuotedSingle": {
+			"name": "string.quoted.single.abc",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.abc",
+					"match": "\\\\'"
+				}
+			]
+		},
+		"commentLine": {
+			"patterns": [
+				{
+					"name": "comment.line.abc",
+					"match": "//.*$"
+				}
+			]
+		},
+		"commentBlock": {
+			"name": "comment.block.abc",
+			"begin": "/\\*",
+			"end": "\\*/"
+		}
+	},
+	"scopeName": "source.abc"
+}
